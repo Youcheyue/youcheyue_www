@@ -1,0 +1,327 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='keywords', content='有车约,im,youcheyue,地理位置,交友,iphone,android,app')
+    meta(name='description', content='有车约是有车约（北京）信息技术有限公司于2016年1月推出的一款基于地理位置的车友社交生活服务的智能终端产品。通过“有车约”，您可以认识身边的车友和汽车行业从业者；加入车友群组；参加车友活动；查看和回复车友动态；免费发送文字消息、语音、照片、精准的地理位置以及汽车行业相关动态信息和身边的人更好的交流；使用我们的产品还能给车友提供汽车资讯、汽车车展、汽车团购、汽车保养、二手车交易、违章查询等汽车服务。使命：建立专注、便捷、完善的车友社交生活服务平台价值观：服务车友，造就自己；帮助车友，成长自己远景：让现在和将来的车友都喜欢用我们的')
+    title 有车约官网
+    link(rel='stylesheet', type='text/css', href='/youcheyue/css/css.css')
+    link(rel='stylesheet', href='/youcheyue/css/font-awesome.css')
+    script(type='text/javascript', src='/youcheyue/js/jquery.js')
+    script(type='text/javascript', src='/youcheyue/js/jquery.fullPage.js')
+    script(type='text/javascript', src='/youcheyue/js/jquery.slimscroll.min.js')
+    script(src='http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js')
+    script(type='text/javascript', src='/youcheyue/js/qrcode.min.js')
+    script(type='text/javascript', src='/youcheyue/js/omee.js')
+    script.
+      var pattern = /iPad/;
+      if (window.navigator.appVersion.match(pattern)) {
+        var links = document.getElementsByTagName('link');
+        var link = document.createElement("link");
+        link.href = 'https://os.alipayobjects.com/rmsportal/dimWGADKRtnNcgL.css';
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        document.getElementsByTagName("head")[0].removeChild(links[links.length - 1]);
+        document.getElementsByTagName("head")[0].appendChild(link);
+      }
+  body
+    script.
+      $(function () {
+        var $mlNav = $('.ml-nav');
+        $('#dowebok').fullpage({
+          //sectionsColor: ['#238C00', '#FA895D', '#ED6374', '#f90'],
+          navigationTooltips: ['首页', '更新日志', '加入我们', '关于有车约'],
+          navigation: true,
+          anchors: ['page1', 'page2', 'page3', 'page4'],
+          menu: '#menu',
+          scrollingSpeed: 1000,
+          scrollOverflow: true,
+          afterRender: function () {
+            $('.section1 h2').fadeIn(1500);
+            $('.section1 .btn').animate({bottom: '80px'}, 500);
+          },
+          afterLoad: function (anchorLink, index) {
+            if (index == 1) {
+              $('.section1 h2').fadeIn(1800);
+              $('.section1 .btn').animate({bottom: '80px'}, 500);
+              //$(this).find('h2').animate({top: '25%'},500);
+              $(this).find('.apple').fadeIn();
+              $(this).find('.android').delay(500).fadeIn("slow");
+              $(this).find('.scan-QR-code').delay(900).fadeIn("slow");
+              //$(this).find('.scan-QR-code').delay(1500).fadeIn("slow");
+            }
+            if (index == 2) {
+              $(".section2").each(function () {
+                $(this).find('h2').animate({top: '25%'}, 500);
+                $(this).find('.text').delay(500).animate({left: '0'}, 500);
+                $(this).find('.imgbg').delay(900).animate({right: '0'}, 500);
+                $(this).find('.bg2').fadeIn(500);
+              });
+            }
+            if (index == 3) {
+              $(".section3").each(function () {
+                $(this).find('h2').animate({top: '200px'}, 500);
+                $(this).find('h3').animate({top: '270px'}, 500);
+                $(this).find('.text').animate({left: '0'}, 500);
+                $(this).find('.imgbg').animate({right: '0'}, 500);
+                $(this).find('.bg3').delay(700).slideDown(500);
+              });
+            }
+            if (index == 4) {
+              $(".section4").each(function () {
+                $(this).find('h2').animate({top: '25%'}, 500);
+                $(this).find('.text').animate({left: '0'}, 500);
+                $(this).find('.imgbg').animate({right: '0'}, 500);
+                $(this).find('.bg4').fadeIn(500);
+              });
+            }
+            if (index == 5) {
+              $(".section5").each(function () {
+                $(this).find('h2').animate({top: '25%'}, 500);
+                $(this).find('.text').animate({left: '0'}, 500);
+                $(this).find('.imgbg').animate({right: '0'}, 500);
+                $(this).find('.bg5').fadeIn(500);
+              });
+            }
+            if (index == 6) {
+              $(".section6").each(function () {
+                $('.section6 .btn').animate({bottom: '80px'}, 500);
+                $(this).find('h2').animate({top: '25%'}, 500);
+                $(this).find('.t1').fadeIn();
+                $(this).find('.t2').delay(500).fadeIn("slow");
+                $(this).find('.t3').delay(900).fadeIn("slow");
+              });
+            }
+          },
+          onLeave: function (index, nextIndex, direction) {
+            if (index == 2 && direction == 'up') {
+              $mlNav.animate({top: '5%'}, 680);
+            } else if (index == 1 && direction == 'down') {
+              $mlNav.animate({top: '-90'}, 400);
+            } else if (index == 3 && direction == 'up') {
+              $mlNav.animate({top: '-90'}, 500);
+            } else {
+              $mlNav.animate({top: '-90'}, 400);
+            }
+            if (index == '1') {
+              $('.section1 h2').fadeOut(1000);
+              $('.section1 .btn').animate({bottom: '-120%'}, 500);
+              $(this).find('.apple').delay(900).fadeOut("slow");
+              $(this).find('.android').delay(500).fadeOut("slow");
+              $(this).find('.windows').delay(200).fadeOut("slow");
+              $(this).find('.scan-QR-code').fadeOut();
+            }
+            if (index == '2') {
+              $(".section2").each(function () {
+                $(this).find('h2').animate({top: '-120%'}, 1500);
+                $(this).find('.text').animate({left: '-120%'}, 1500);
+                $(this).find('.imgbg').animate({right: '-120%'}, 1500);
+                $(this).find('.bg2').fadeOut(500);
+              });
+            }
+            if (index == '3') {
+              $(".section3").each(function () {
+                $(this).find('h2').animate({top: '-120%'}, 1500);
+                $(this).find('h3').animate({top: '-120%'}, 1500);
+                $(this).find('.text').animate({left: '-120%'}, 1500);
+                $(this).find('.imgbg').animate({right: '-120%'}, 1500);
+                $(this).find('.bg3').delay(700).slideUp(500);
+              });
+            }
+            if (index == '4') {
+              $(".section4").each(function () {
+                $(this).find('h2').animate({top: '-120%'}, 1500);
+                $(this).find('.text').animate({left: '-120%'}, 1500);
+                $(this).find('.imgbg').animate({right: '-120%'}, 1500);
+                $(this).find('.bg4').fadeOut(500);
+              });
+            }
+            if (index == '5') {
+              $(".section5").each(function () {
+                $(this).find('h2').animate({top: '-120%'}, 1500);
+                $(this).find('.text').animate({left: '-120%'}, 1500);
+                $(this).find('.imgbg').animate({right: '-120%'}, 1500);
+                $(this).find('.bg5').fadeOut(500);
+              });
+            }
+            if (index == '6') {
+              $('.section6 .btn').animate({bottom: '-120%'}, 500);
+              $(".section6").each(function () {
+                $(this).find('h2').animate({top: '-125%'}, 500);
+                $(this).find('.t1').delay(900).fadeOut("slow");
+                $(this).find('.t2').delay(500).fadeOut("slow");
+                $(this).find('.t3').fadeOut();
+              });
+            }
+          }
+        });
+      });
+      //鼠标滑动
+      $(document).ready(function () {
+        $(".user-avatar-ncik").hover(function () {
+          $(this).find(".work-panel").stop().animate({height: "170px"}, 400).show()
+        }, function () {
+          $(this).find(".work-panel").stop().animate({height: "0px"}, 400).hide()
+        });
+      });
+      //生成二维码
+      $(document).ready(function () {
+        jQuery('#qrcode').qrcode({
+          render: "canvas",
+          text: "http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk",
+          width: 140,
+          height: 140,
+        });
+      });
+    #header.ml-nav
+      .inner
+        .logo
+          img(src='/youcheyue/images/logo.png')
+        ul#menu
+          li.active(data-menuanchor='page1')
+            a(href='#page1') 首页
+          li(data-menuanchor='page2')
+            a(href='#page2') 更新日记
+          li(data-menuanchor='page3')
+            a(href='#page3') 加入我们
+          li(data-menuanchor='page4')
+            a(href='#page4') 关于有车约
+    #dowebok
+      section.section.section1
+        .inner.pr
+          h2
+            img(src='/youcheyue/images/slogan.png')
+          ul.chengxu
+            li.apple
+              a(href='#', target='_blank')
+                i.fa.fa-apple
+                p 暂无
+            li.android
+              a(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk', target='_blank')
+                i.fa.fa-android
+                p V1.0
+            li.scan-QR-code.user-avatar-ncik
+              .work-panel
+                #qrcode
+                .arrow-down
+              i.fa.fa-qrcode
+              p 点我吧
+      section.section.section2
+        .inner.pr
+          .slideTxtBox-o
+            .hd
+              ul
+                li 1.0
+                li 0.1.0
+                li 0.0.9
+              s
+            .bd
+              .tappe
+                p  1、增加新闻资讯
+                p 2、修改通讯录显示方式
+              .tappe
+                p  1、动态改变闪屏
+                p 2、身边好友图标更换
+              .tappe
+                p  1、优化图片上传,上传多张图片的同时压缩图片
+                p 2、优化定位
+          script(type='text/javascript').
+            jQuery(".slideTxtBox-o").slide({targetCell: ".tappe", trigger: "click"});
+      section.section.section3
+        .inner.pr
+          // Tab切换
+          .slideTxtBox
+            .hd
+              ul
+                li
+                  a(href='#') Android高级研发工程师
+                li
+                  a(href='#') iOS高级研发工程师
+                li
+                  a(href='#') 服务端高级研发工程师
+            .bd
+              .tappe
+                .riqi
+                  p 发布日期
+                  p 2016-01-05
+                h4 工作职责：
+                p - 参与 Android客户端相关的设计和研发工作
+                p - 优化 Android客户端模块结构和流程逻辑，产品适配和升级
+                h4 职位要求：
+                p - 精通Android SDK，熟悉Android程序编写及Android系统运行流程
+                p - 精通Internet基本协议（TCP/IP、HTTP）内容及相关应用
+                p - 精通客户端的代码调试及诊断等相关技术
+                p - 热爱互联网，对探索未知领域有浓厚的兴趣
+                p - 优秀的分析问题和解决问题的能力，踏实、勤奋的工作激情，敏锐全面的洞察力，清晰缜密的逻辑思维能力，以及独立的分析调研能力
+                p - 具备优秀的沟通、协作、推动能力和良好的团队合作精神，能够准确把握用户的需求
+                h4 有以下经验者优先：
+                p - 精通Android NDK者优先
+                p
+                  | - 有很好的逆向分析能力，有快速阅读Java反编译代码的能力，熟练掌握IDA等反汇编工具者
+              .tappe
+                .riqi
+                  p 发布日期
+                  p 2016-01-05
+                h4 工作职责：
+                p - 参与 iOS客户端相关的设计和研发工作
+                p - 优化 iOS客户端模块结构和流程逻辑，产品适配和升级
+                h4 职位要求：
+                p - 对Objective-C有深入的理解，理解面向对象设计的基本原则，熟悉常用的设计模式及算法
+                p - 熟悉iOS平台UI设计，尤其对UIKit framework有清晰的理解，能够熟练编写自定义控件和常用动画效果；
+                p - 熟悉iOS常用的framework，对内存管理、对象生命周期有清晰的认识
+                p - 精通Internet基本协议（TCP/IP、HTTP）内容及相关应用
+                p - 热爱互联网，对探索未知领域有浓厚的兴趣
+                p - 优秀的分析问题和解决问题的能力，踏实、勤奋的工作激情，敏锐全面的洞察力，清晰缜密的逻辑思维能力，以及独立的分析调研能力
+                p - 具备优秀的沟通、协作、推动能力和良好的团队合作精神，能够准确把握用户的需求
+                h4 有以下经验者优先：
+                p - 有移动端C/C++开发经验者优先
+                p - 有大型iOS SDK项目开发经验者优先
+              .tappe
+                .riqi
+                  p 发布日期
+                  p 2016-01-05
+                h4 工作职责：
+                p - 负责产品数据端的功能升级与维护
+                p - 负责产品服务架构和数据存储架构的设计与升级
+                p - 负责产品升级功能完善的相关调研工作
+                p - 负责数据的自动化分析处理工作
+                h4 职位要求：
+                p - 三年以上中型或大型互联网产品软件的研发工作经验
+                p - 对数据结构和算法设计有较为深刻的理解
+                p - 精通C/C++或Java，熟悉Linux平台，熟练运用至少一门脚本语言（Shell/Perl/PHP/Python/Lua/JavaScript不限）
+                p - 对数据敏感，能够把合理的思路成功应用于实践
+                p - 热爱互联网，对探索未知领域有浓厚的兴趣
+                p - 优秀的分析问题和解决问题的能力，踏实、勤奋的工作激情，敏锐全面的洞察力，清晰缜密的逻辑思维能力，以及独立的分析调研能力
+                p - 具备优秀的沟通、协作、推动能力和良好的团队合作精神，能够准确把握用户的需求
+                h4 有以下经验者优先：
+                p - 有搜索引擎或架构设计经验者优先
+                p - 有数据挖掘、机器学习、自然语言处理相关项目经验者优先
+                p - 有移动产品相关研发经验者优先
+          script(type='text/javascript').
+            jQuery(".slideTxtBox").slide({targetCell: ".tappe", trigger: "click"});
+          // Tab切换
+      section.section.section4
+        .inner.pr
+          //
+            <h2 class="title">
+            <span>我们的自述</span>
+            </h2>
+            <div class="aboutBox">
+            <h4>关于我们</h4>
+            <p>“有车约”是有车约（北京）信息技术有限公司于2016年1月推出的一款基于地理位置的车友社交生活服务的智能终端产品。</p>
+            <p>通过“有车约”，您可以认识身边的车友和汽车行业从业者；加入车友群组；参加车友活动；查看和回复车友动态；免费发送文字消息、语音、照片、精准的地理位置以及汽车行业相关动态信息和身边的人更好的交流；使用我们的产品还能给车友提供汽车资讯、汽车车展、汽车团购、汽车保养、二手车交易、违章查询等汽车服务。</p>
+            <p>使命：建立专注、便捷、完善的车友社交生活服务平台</p>
+            <p>价值观：服务车友，造就自己；帮助车友，成长自己</p>
+            <p>远景：让现在和将来的车友都喜欢用我们的</p>
+            </div>
+            </div>
+          h2 关于我们
+          .text
+            p “有车约”是有车约（北京）信息技术有限公司于2016年1月推出的一款基于地理位置的车友社交生活服务的智能终端产品。
+            p
+              | 通过“有车约”，您可以认识身边的车友和汽车行业从业者；加入车友群组；参加车友活动；查看和回复车友动态；免费发送文字消息、语音、照片、精准的地理位置以及汽车行业相关动态信息和身边的人更好的交流；使用我们的产品还能给车友提供汽车资讯、汽车车展、汽车团购、汽车保养、二手车交易、违章查询等汽车服务。
+            p 使命：建立专注、便捷、完善的车友社交生活服务平台
+            p 价值观：服务车友，造就自己；帮助车友，成长自己
+            p 远景：让现在和将来的车友都喜欢用我们的
+          // <div class="bg4"></div>
+        #footer Copyright©2015-2016 youcheyue.com All Rights Reserved
