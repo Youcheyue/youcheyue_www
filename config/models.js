@@ -12,7 +12,7 @@ module.exports.models = {
    * connections (see `config/connections.js`)                                *
    *                                                                          *
    ***************************************************************************/
-  connection: 'disk',
+  connection: 'localDiskDb',
 
   /***************************************************************************
    *                                                                          *
