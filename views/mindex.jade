@@ -4,21 +4,120 @@ html
     meta(charset='utf-8')
     title 有车约 - 移动首页
     link(rel='stylesheet', type='text/css', href='/youcheyue/css/css.css')
+    link(rel='shortcut icon', href='images/ycy_favicon.ico')
     link(rel='stylesheet', href='/youcheyue/css/font-awesome.css')
+    link(rel='stylesheet', href='/youcheyue/css/animate.css')
     meta(name='viewport', content='width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='blank')
     meta(name='format-detection', content='telephone=no')
-  body
-    .imain
-      .logo
-        img(src='/youcheyue/images/logo.png')
-      .blui
-        img(src='/youcheyue/images/bliii.png')
-      ul.anniuhhh
-        // <li><a href="#"><i class="fa fa-apple"></i>IOS版 V1.0 <i class="fa fa-arrow-circle-down"></i></a></li>
-        li
-          a(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk')
-            i.fa.fa-android
-            | 下载安卓版
+    script(type='text/javascript', src='/youcheyue/js/jquery.js')
+    script(type='text/javascript', src='/youcheyue/js/jquery.fullPage.js')
+
+    body
+    script.
+      $(function(){
+      $('#dowebok').fullpage({
+      sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
+      //navigationTooltips: ['首页', '更新日志', '加入我们', '关于有车约'],
+      navigation: true,
+      anchors: ['page1', 'page2', 'page3', 'page4'],
+      menu: '#menu',
+      scrollingSpeed:1000,
+      scrollOverflow: true,
+      afterRender: function(){
+      $('.mp1 .titlep').addClass('animated lightSpeedIn');
+      setTimeout(function(){
+      $('.mp1 .titlep').removeClass('animated lightSpeedIn');
+      }, 1000);
+      $('.mp1 .download').addClass('animated fadeInUp');
+      setTimeout(function(){
+      $('.mp1 .download').removeClass('animated fadeInUp');
+      }, 1000);
+      },
+      afterLoad: function(anchorLink, index){
+      if(index == 1){
+      $('.mp1 .titlep').addClass('animated lightSpeedIn');
+      setTimeout(function(){
+      $('.mp1 .titlep').removeClass('animated lightSpeedIn');
+      }, 1000);
+      $('.mp1 .download').addClass('animated fadeInUp');
+      setTimeout(function(){
+      $('.mp1 .download').removeClass('animated fadeInUp');
+      }, 1000);
+      }
+      if(index == 2){
+      $('.mp2 .txt2').addClass('animated flipInX');
+      setTimeout(function(){
+      $('.mp2 .txt2').removeClass('animated flipInX');
+      }, 1000);
+      $('.mp2 .pic2').addClass('animated bounceInLeft');
+      setTimeout(function(){
+      $('.mp2 .pic2').removeClass('animated bounceInLeft');
+      }, 1000);
+      }
+      if(index == 3){
+      $('.mp3 .txt3').addClass('animated rubberBand');
+      setTimeout(function(){
+      $('.mp3 .txt3').removeClass('animated rubberBand');
+      }, 1000);
+      $('.mp3 .pic3').addClass('animated bounceInDown');
+      setTimeout(function(){
+      $('.mp3 .pic3').removeClass('animated bounceInDown');
+      }, 1000);
+      }
+      if(index == 4){
+      $('.mp4 .txt4').addClass('animated lightSpeedIn');
+      setTimeout(function(){
+      $('.mp4 .txt4').removeClass('animated lightSpeedIn');
+      }, 1000);
+      $('.mp4 .pic4').addClass('animated flipOutY');
+      setTimeout(function(){
+      $('.mp4 .pic4').removeClass('animated flipOutY');
+      }, 1000);
+      }
+      $('.mp4 .download').addClass('animated fadeInUp');
+      setTimeout(function(){
+      $('.mp4 .download').removeClass('animated fadeInUp');
+      }, 1000);
+      },
+      onLeave: function(index,nextIndex, direction){
+      if(index == '1'){
+      }
+      if(index == '2'){
+      }
+      if(index == '3'){
+      }
+      if(index == '4'){
+      }
+      }
+      });
+      });
+    #dowebok
+      section.section.mp1
+        .page-beij
+          .logo
+            img(src='/youcheyue/images/mlogo.png')
+          .titlep
+            img(src='/youcheyue/images/bliii.png')
+          a.download.top4444(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk')
+            | 下载应用 
             i.fa.fa-arrow-circle-down
+      section.section.mp2
+        .txt2
+          img(src='/youcheyue/images/txt2.png')
+        .pic2
+          img(src='/youcheyue/images/pic2.png')
+      section.section.mp3
+        .txt3
+          img(src='/youcheyue/images/txt3.png')
+        .pic3
+          img(src='/youcheyue/images/pic3.png')
+      section.section.mp4
+        .txt4
+          img(src='/youcheyue/images/txt4.png')
+        .pic4
+          img(src='/youcheyue/images/pic4.png')
+        a.download.top333(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk')
+          | 下载应用 
+          i.fa.fa-arrow-circle-down
