@@ -21,4 +21,20 @@
 
 module.exports.cron = {
   
+  'get_url': {
+    schedule: '* * * * * *',
+    onTick: function(){
+    //doSomething()
+    },
+    onComplete: function(){
+    //doSomething()
+    },
+    //Start task immediately
+    start: true,
+    timezone: undefined,
+    context: undefined
+  
+  }
+  
+  
 };
