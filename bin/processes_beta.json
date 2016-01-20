@@ -1,16 +1,16 @@
 {
   "apps" : [{
-    "name"        : "youcheyue-www-9010",
+    "name"        : "youcheyue-www-9005",
     "script"      : "app.js",
     "log_date_format"  : "YYYY-MM-DD HH:mm:ss Z",
-    "error_file"       : "/var/log/youcheyue/applogs/server-beta-9010-err.log",
-    "out_file"         : "/var/log/youcheyue/applogs/server-beta-9010-out.log",
+    "error_file"       : "/var/log/youcheyue/applogs/server-beta-9005-err.log",
+    "out_file"         : "/var/log/youcheyue/applogs/server-beta-9005-out.log",
     "ignore_watch" : ["[\\/\\\\]\\./", "node_modules"],
     "watch"       : false,
     "merge_logs"  : true,
     "cwd"         : "./",
     "env": {
-      "PORT": 9010
+      "PORT": 9005
     }
   }]
 }
