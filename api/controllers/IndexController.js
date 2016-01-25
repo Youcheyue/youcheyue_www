@@ -14,6 +14,27 @@ module.exports = {
       res.view('mindex');
     }
   },
+  version: function(req, res) {
+    if(isPc(req.headers['user-agent'])){
+      res.view('version');
+    }else{
+      res.view('mindex');
+    }
+  },
+  join: function(req, res) {
+    if(isPc(req.headers['user-agent'])){
+      res.view('join');
+    }else{
+      res.view('mindex');
+    }
+  },
+  about: function(req, res) {
+    if(isPc(req.headers['user-agent'])){
+      res.view('about');
+    }else{
+      res.view('mindex');
+    }
+  },
 
   /**
    * Overrides for the settings in `config/controllers.js`
