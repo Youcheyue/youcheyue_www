@@ -35,6 +35,18 @@ module.exports.routes = {
   '/': {
     controller:'indexController',
     action: 'index'
+  },
+  '/version': {
+    controller:'indexController',
+    action: 'version'
+  },
+  '/join': {
+    controller:'indexController',
+    action: 'join'
+  },
+  '/about': {
+    controller:'indexController',
+    action: 'about'
   }
 
   /***************************************************************************

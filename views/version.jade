@@ -4,82 +4,54 @@ html
     meta(charset='utf-8')
     meta(name='keywords', content='有车约,im,youcheyue,地理位置,交友,iphone,android,app')
     meta(name='description', content='有车约是有车约（北京）信息技术有限公司于2016年1月推出的一款基于地理位置的车友社交生活服务的智能终端产品。通过“有车约”，您可以认识身边的车友和汽车行业从业者；加入车友群组；参加车友活动；查看和回复车友动态；免费发送文字消息、语音、照片、精准的地理位置以及汽车行业相关动态信息和身边的人更好的交流；使用我们的产品还能给车友提供汽车资讯、汽车车展、汽车团购、汽车保养、二手车交易、违章查询等汽车服务。使命：建立专注、便捷、完善的车友社交生活服务平台价值观：服务车友，造就自己；帮助车友，成长自己远景：让现在和将来的车友都喜欢用我们的')
-    title 有车约官网
+    title 有车约官网-版本动态
     link(rel='stylesheet', type='text/css', href='/youcheyue/css/css.css')
     link(rel='stylesheet', href='/youcheyue/css/font-awesome.css')
     link(rel='stylesheet', href='/youcheyue/css/animate.css')
     script(type='text/javascript', src='/youcheyue/js/jquery.js')
     script(type='text/javascript', src='/youcheyue/js/jquery.slimscroll.min.js')
     script(src='http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js')
-    script(type='text/javascript', src='/youcheyue/js/qrcode.min.js')
+    script(type='text/javascript', src='/youcheyue/js/omee.js')
   body
-    script.
-      //鼠标滑动
-      $(document).ready(function() {
-      $(".user-avatar-ncik").hover(function(){
-      $(this).find(".work-panel").stop().animate({height:"173px"},400).show()
-      },function(){
-      $(this).find(".work-panel").stop().animate({height:"0px"},400).hide()
-      });
-      });
-      //生成二维码
-      $(document).ready(function() {
-      jQuery('#qrcode').qrcode({
-      render	: "canvas",
-      text	: "http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk",
-      width : 140,
-      height: 140,
-      });
-      });
-    #header
+    #header.ml-nav
       .inner
         .logo
           img(src='/youcheyue/images/logo.png')
         ul#menu
-          li.active
-            a(href='#') 首页
           li
+            a(href='/') 首页
+          li.active
             a(href='/version') 版本动态
           li
             a(href='/join') 加入我们
           li
             a(href='/about') 关于有车约
-    section.banner.pr
-      .txt1.animated.rotateInDownRight
-        img(src='/youcheyue/images/slogan.png')
-      ul.chengxu.animated.fadeInUp
-        li.scan-QR-code.user-avatar-ncik
-          .work-panel
-            #qrcode
-            .arrow-down
-          i.fa.fa-qrcode
-          h2 扫码下载
-        li.apple
-          a(href='#', target='_blank')
-            i.fa.fa-apple
-            h2 App Store
-        li.android
-          a(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk', target='_blank')
-            i.fa.fa-android
-            h2 Andoid下载
-    section.se1.pr
-      .con
-        .tu1.wow.animated.slideInLeft(data-wow-delay='0.3s')
-          img(src='/youcheyue/images/pc-tu1.png')
-        .txt1.wow.animated.fadeInUp(data-wow-delay='0.5s')
-          img(src='/youcheyue/images/pc-txt1.png')
-    section.se2.pr
-      .con
-        .txt2.wow.animated.fadeInUp(data-wow-delay='0.8s')
-          img(src='/youcheyue/images/pc-txt2.png')
-        .tu2.wow.animated.fadeInDown(data-wow-delay='0.6s')
-          img(src='/youcheyue/images/pc-tu2.png')
-    section.se3.pr
-      .con
-        .tu3.wow.animated.fadeInDown(data-wow-delay='0.9s')
-          img(src='/youcheyue/images/pc-tu3.png')
-        .txt3.wow.animated.fadeInUp(data-wow-delay='1.3')
-          img(src='/youcheyue/images/pc-txt3.png')
+    .banner1.pr
+      div
+        img(src='/youcheyue/images/barl.png')
+    .main
+      h2 版本动态
+      // Tab切换
+      .slideTxtBox-o
+        .hd
+          ul
+            li 1.0
+            li 0.1.0
+            li 0.0.9
+          s
+        .bd
+          .tappe
+            p  1、增加新闻资讯
+            p 2、修改通讯录显示方式
+          .tappe
+            p  1、动态改变闪屏
+            p 2、身边好友图标更换
+          .tappe
+            p  1、优化图片上传,上传多张图片的同时压缩图片
+            p 2、优化定位
+      script(type='text/javascript').
+        jQuery(".slideTxtBox-o").slide({targetCell:".tappe",trigger:"click"});
+      // Tab切换
     #footer
       .inner
         .contact
@@ -99,7 +71,7 @@ html
               p 电话：
               p 020-61091480
         .copyright
-          | 京ICP备15067566号-1 Copyright 
+          | 京ICP备15067566号-1 Copyright
           i.fa.fa-copyright
           |  2015-2016 youcheyue.com All Rights Reserved
     script(type='text/javascript', src='/youcheyue/js/wow.min.js')
