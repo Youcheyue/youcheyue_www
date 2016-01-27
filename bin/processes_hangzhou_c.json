@@ -13,5 +13,15 @@
     "env": {
       "PORT": 9005
     }
-  }]
+  }],
+  "deploy" : {
+    "production" : {
+      "user" : "ycyuser",
+      "host" : "120.55.185.212",
+      "ref"  : "origin/master",
+      "repo" : "git@git.oschina.net:leoliew/youcheyue_server.git",
+      "path" : "/home/ycyuser/project/youcheyue_server",
+      "post-deploy" : "npm install && pm2 startOrRestart bin/processes_hangzhou_c.json --env production"
+    }
+  }
 }
