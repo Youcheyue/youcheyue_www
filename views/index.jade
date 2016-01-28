@@ -26,7 +26,7 @@ html
       $(document).ready(function() {
       jQuery('#qrcode').qrcode({
       render	: "canvas",
-      text	: "http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk",
+      text	: '#{url}',
       width : 140,
       height: 140,
       });
@@ -59,7 +59,7 @@ html
             i.fa.fa-apple
             h2 App Store
         li.android
-          a(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk', target='_blank')
+          a(href='#{url}', target='_blank')
             i.fa.fa-android
             h2 Andoid下载
     section.se1.pr
@@ -99,7 +99,7 @@ html
               p 电话：
               p 020-61091480
         .copyright
-          | 京ICP备15067566号-1 Copyright 
+          | 京ICP备15067566号-1 Copyright
           i.fa.fa-copyright
           |  2015-2016 youcheyue.com All Rights Reserved
     script(type='text/javascript', src='/youcheyue/js/wow.min.js')
