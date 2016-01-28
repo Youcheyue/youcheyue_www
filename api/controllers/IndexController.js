@@ -8,11 +8,60 @@
 module.exports = {
 
   index: function(req, res) {
-    if(isPc(req.headers['user-agent'])){
-      res.view('index');
-    }else{
-      res.view('mindex');
-    }
+    var out_url = 'http://download.fir.im/v2/app/install/56559c1500fc7444a2000009?download_token=3790c7ca27de3b36ea39055e7141a930';
+    var need_updated = true;
+    async.waterfall([
+      function(cb){
+        Url.find({limit: 1, sort: "createdAt DESC"},function(err, result){
+          if(err){
+            sails.log.error(err);
+            need_updated = true;
+          }else{
+            if(!_.isEmpty(result)){
+              if((new Date().getTime() - new Date(result[0].createdAt).getTime()) > 24*60*60*1000){
+                need_updated = true;
+              }else{
+                out_url = result[0].url;
+                need_updated = false;
+              }
+            }else{
+              need_updated = true;
+            }
+          }
+          cb(null);
+        });
+      },
+      function(cb){
+        if(need_updated){
+          UrlService.getNewUrl(function(error,got){
+            if(error || !got){
+              sails.log.error(err || 'get url form fir error !');
+              cb(null);
+            }else{
+              out_url = got;
+              Url.create({url:got},function(error2,created){
+                if(error2){
+                  sails.log.error(error2);
+                }
+                cb(null);
+              });
+            }
+          });
+        }else{
+          cb(null);
+        }
+      }
+    ],function(err,result){
+      if(err){
+        sails.log.error(err);
+      }
+      if(isPc(req.headers['user-agent'])){
+        res.view('index',{url:out_url});
+      }else{
+        res.view('mindex',{url:out_url});
+      }
+    });
+
   },
   version: function(req, res) {
     if(isPc(req.headers['user-agent'])){
