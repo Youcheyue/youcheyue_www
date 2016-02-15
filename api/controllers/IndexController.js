@@ -58,11 +58,7 @@ module.exports = {
       if(isPc(req.headers['user-agent'])){
         res.view('index',{url:out_url});
       }else{
-        if(isIos(req.headers['user-agent'])){
-          res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
-        }else{
-          res.view('mindex',{url:out_url});
-        }
+        res.view('mindex');
 
       }
     });
@@ -72,33 +68,21 @@ module.exports = {
     if(isPc(req.headers['user-agent'])){
       res.view('version');
     }else{
-      if(isIos(req.headers['user-agent'])){
-        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
-      }else{
-        res.view('mindex');
-      }
+      res.view('mindex');
     }
   },
   join: function(req, res) {
     if(isPc(req.headers['user-agent'])){
       res.view('join');
     }else{
-      if(isIos(req.headers['user-agent'])){
-        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
-      }else{
-        res.view('mindex');
-      }
+      res.view('mindex');
     }
   },
   about: function(req, res) {
     if(isPc(req.headers['user-agent'])){
       res.view('about');
     }else{
-      if(isIos(req.headers['user-agent'])){
-        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
-      }else{
-        res.view('mindex');
-      }
+      res.view('mindex');
     }
   },
 
