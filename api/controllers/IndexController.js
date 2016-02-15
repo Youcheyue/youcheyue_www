@@ -58,7 +58,12 @@ module.exports = {
       if(isPc(req.headers['user-agent'])){
         res.view('index',{url:out_url});
       }else{
-        res.view('mindex',{url:out_url});
+        if(isIos(req.headers['user-agent'])){
+          res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
+        }else{
+          res.view('mindex',{url:out_url});
+        }
+
       }
     });
 
@@ -67,21 +72,33 @@ module.exports = {
     if(isPc(req.headers['user-agent'])){
       res.view('version');
     }else{
-      res.view('mindex');
+      if(isIos(req.headers['user-agent'])){
+        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
+      }else{
+        res.view('mindex');
+      }
     }
   },
   join: function(req, res) {
     if(isPc(req.headers['user-agent'])){
       res.view('join');
     }else{
-      res.view('mindex');
+      if(isIos(req.headers['user-agent'])){
+        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
+      }else{
+        res.view('mindex');
+      }
     }
   },
   about: function(req, res) {
     if(isPc(req.headers['user-agent'])){
       res.view('about');
     }else{
-      res.view('mindex');
+      if(isIos(req.headers['user-agent'])){
+        res.view('mindex',{url:'https://itunes.apple.com/cn/app/id1080937809'});
+      }else{
+        res.view('mindex');
+      }
     }
   },
 
@@ -106,3 +123,10 @@ function isPc(u) {
 //if (!isPc()) {
 //  window.location.href = '/m';
 //}
+function isIos(u) {
+  if ((u.indexOf('iPad') > -1) || (u.indexOf('iPhone') > -1)) {
+    return true;
+  }  else {
+    return false;
+  }
+}
