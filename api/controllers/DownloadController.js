@@ -3,13 +3,9 @@
  */
 module.exports = {
   download: function (req, res) {
-    //if (req.headers['user-agent'].indexOf('MicroMessenger') > -1) {
-    //  if(isIos(req.headers['user-agent'])){
-    //    return res.send('<p style="font-size: 5em">点击右上角<br/>选择 在Safari中打开</p>');
-    //  }else{
-    //    return res.send('<p style="font-size: 5em">点击右上角<br/>选择 在浏览器中打开</p>');
-    //  }
-    //}
+    if (req.headers['user-agent'].indexOf('MicroMessenger') > -1) {
+      return res.send('<div style="position:absolute;right:18px;top:5px;z-index:19999;"><img style="width: 100%" src="/youcheyue/images/shareto1.png"></div>');
+    }
     if (isIos(req.headers['user-agent'])) {
       return res.redirect('https://itunes.apple.com/cn/app/id1080937809');
     } else {
