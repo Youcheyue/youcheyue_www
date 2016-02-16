@@ -58,7 +58,8 @@ module.exports = {
       if(isPc(req.headers['user-agent'])){
         res.view('index',{url:out_url});
       }else{
-        res.view('mindex',{url:out_url});
+        res.view('mindex');
+
       }
     });
 
@@ -106,3 +107,10 @@ function isPc(u) {
 //if (!isPc()) {
 //  window.location.href = '/m';
 //}
+function isIos(u) {
+  if ((u.indexOf('iPad') > -1) || (u.indexOf('iPhone') > -1)) {
+    return true;
+  }  else {
+    return false;
+  }
+}
