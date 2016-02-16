@@ -40,6 +40,12 @@ var _system = {
         _system.$("cover").onclick = null;
         window.onresize = null;
       };
+      _system.$("guide").onclick = function () {
+        _system._cover();
+        _system.$("guide").style.display = "none";
+        _system.$("cover").onclick = null;
+        window.onresize = null;
+      };
     }
   },
   _zero: function (n) {
