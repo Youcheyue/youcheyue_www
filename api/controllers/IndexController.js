@@ -96,13 +96,18 @@ module.exports = {
   }
 };
 function isPc(u) {
-  if (u.indexOf('iPad') > -1) {
+  if(!u){
     return true;
-  } else if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Windows Phone') > -1 || u.indexOf('Mobile') > -1) {
-    return false;
-  } else {
-    return true;
+  }else{
+    if (u.indexOf('iPad') > -1) {
+      return true;
+    } else if (u.indexOf('Android') > -1 || u.indexOf('iPhone') > -1 || u.indexOf('Windows Phone') > -1 || u.indexOf('Mobile') > -1) {
+      return false;
+    } else {
+      return true;
+    }
   }
+
 }
 //if (!isPc()) {
 //  window.location.href = '/m';
