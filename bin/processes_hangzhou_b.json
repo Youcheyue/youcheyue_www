@@ -1,0 +1,27 @@
+{
+  "apps" : [{
+    "name"        : "youcheyue-www-9005",
+    "script"      : "app.js",
+    "args"        : "['--prod','--stack-size=32000']",
+    "log_date_format"  : "YYYY-MM-DD HH:mm:ss Z",
+    "error_file"       : "/var/log/youcheyue/applogs/server-www-9005-err.log",
+    "out_file"         : "/var/log/youcheyue/applogs/server-www-9005-out.log",
+    "ignore_watch" : ["[\\/\\\\]\\./", "node_modules"],
+    "watch"       : false,
+    "merge_logs"  : true,
+    "cwd"         : "./",
+    "env": {
+      "PORT": 9005
+    }
+  }],
+  "deploy" : {
+    "production" : {
+      "user" : "ycyuser",
+      "host" : "115.29.238.43",
+      "ref"  : "origin/master",
+      "repo" : "git@git.oschina.net:leoliew/youcheyue_www.git",
+      "path" : "/home/ycyuser/project/youcheyue_www",
+      "post-deploy" : "npm install && pm2 startOrRestart bin/processes_hangzhou_c.json --env production"
+    }
+  }
+}
