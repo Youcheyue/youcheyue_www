@@ -47,6 +47,10 @@ module.exports.routes = {
   '/about': {
     controller:'indexController',
     action: 'about'
+  },
+  '/download': {
+    controller:'downloadController',
+    action: 'download'
   }
 
   /***************************************************************************

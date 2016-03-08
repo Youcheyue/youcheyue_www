@@ -9,7 +9,9 @@ module.exports = {
 
   attributes: {
     // Fill your attributes here
-
+    url: {
+      type : 'string'
+    },
     toJSON: function() {
       return this.toObject();
     }

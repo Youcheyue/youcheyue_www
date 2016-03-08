@@ -48,7 +48,7 @@ ul,ol,li,dl,dd,dt {list-style:none}
 .banner1{width: 100%;}
 .banner .txt1{width:30%; left:15%; margin-left:-5%; top:17%; position: absolute; }
 .banner .chengxu{display:block; left:15%; position: absolute; bottom:8%; margin-left:-5%;}
-.banner .chengxu .work-panel{position: absolute; bottom: 73px; display: none; left:10%;}
+.banner .chengxu .work-panel{position: absolute; bottom:68px; display: none; left:10%;}
 .banner .chengxu #qrcode{ background:#fff; padding:5px; border-radius: 5px; width: 140px; height: 140px; }
 .banner .chengxu .arrow-down{width:0; height:0; border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid #fff; margin:0 auto;}
 .banner .chengxu li{ margin-right:5px;  text-align: center; font-size: 20px; line-height:70px; border-radius: 140px; /*display: none;*/ color:#666666;position:relative;}
@@ -113,10 +113,11 @@ ul,ol,li,dl,dd,dt {list-style:none}
 /*.mp1 .page-pic{position: absolute;bottom: -80rem;width: 100%;z-index: 1;}*/
 .mp1 .titlep {position: relative;z-index: 90;text-align: center;color: #111;}
 .mp1 .page-beij{ position: relative;background: #0098F0; width:100%; height:80% }
-.top4444{bottom:-1.5rem;}
-.top333{bottom:2rem;}
-.download{ width:50%; height:50px; line-height: 50px; color: #fff;display:block; border-radius: 50px; text-align:center; font-size:20px; border:solid 1px #fff; position: absolute; background:#FEC57D;z-index: 3; left: 50%; margin-left: -25%;}
+.top4444{bottom:2rem;}
+.top333{bottom:-3rem;}
+.download{ width:64%; color: #fff;display:inline-block; border-radius: 2rem; text-align:center; font-size:1.5rem; border:solid 1px #fff;background:#FEC57D;z-index: 3; padding: 1rem 0; margin: 0 auto 1rem;}
 .download:hover{color: #fff;}
+.btn-grp {position: absolute;width: 100%; text-align:center; }
 
 .section {color: #fff; overflow: hidden;}
 .section .inner{height:100%;}
@@ -188,6 +189,18 @@ ul,ol,li,dl,dd,dt {list-style:none}
 #about .title span::after{border: 10px solid #fafcfc;}
 .title span:after{background: #333; border: 10px solid #fff; border-radius: 100%; bottom: -32px; content: ""; display: block; height: 4px; left: 50%; margin-left: -12px; overflow: hidden; position: absolute; width: 4px;}
 .title span{display: inline-block; font-weight: normal; line-height: 40px; padding: 0 6%; position: relative;}
+
+
+
+.button2{font-size:16px;padding:8px 0;border:1px solid #adadab;color:#000000;background-color: #e8e8e8;background-image:linear-gradient(to top, #dbdbdb, #f4f4f4);background-image:-webkit-gradient(linear, 0 100%, 0 0, from(#dbdbdb),to(#f4f4f4));box-shadow: 0 1px 1px rgba(0,0,0,0.45), inset 0 1px 1px #efefef; text-shadow: 0.5px 0.5px 1px #ffffff;}
+.button2:active{background-color: #dedede;background-image: linear-gradient(to top, #cacaca, #e0e0e0);background-image:-webkit-gradient(linear, 0 100%, 0 0, from(#cacaca),to(#e0e0e0));}
+#mess_share{margin:15px 0;}
+#share_1{float:left;width:49%;}
+#share_2{float:right;width:49%;}
+#mess_share img{width:22px;height:22px;}
+#cover{display:none;position:absolute;left:0;top:0;z-index:18888;background-color:#000000;opacity:0.7;}
+#guide{display:none;position:absolute;right:18px;top:5px;z-index:19999;}
+#guide img{width:100%;}
 
 
 #superContainer{height: 100%; position: relative; /* Touch detection for Windows 8 */ -ms-touch-action: none; /* IE 11 on Windows Phone 8.1*/ touch-action: none;}

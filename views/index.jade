@@ -12,6 +12,18 @@ html
     script(type='text/javascript', src='/youcheyue/js/jquery.slimscroll.min.js')
     script(src='http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js')
     script(type='text/javascript', src='/youcheyue/js/qrcode.min.js')
+    script.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-74586359-1', 'auto');ga('send', 'pageview');
+
   body
     script.
       //鼠标滑动
@@ -26,7 +38,7 @@ html
       $(document).ready(function() {
       jQuery('#qrcode').qrcode({
       render	: "canvas",
-      text	: "http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk",
+      text	: 'http://www.youcheyue.com',
       width : 140,
       height: 140,
       });
@@ -55,11 +67,11 @@ html
           i.fa.fa-qrcode
           h2 扫码下载
         li.apple
-          a(href='#', target='_blank')
+          a(href='https://itunes.apple.com/cn/app/you-che-yue/id1080937809?mt=8', target='_blank')
             i.fa.fa-apple
             h2 App Store
         li.android
-          a(href='http://7xok30.com1.z0.glb.clouddn.com/youcheyue.apk', target='_blank')
+          a(href='#{url}', target='_blank')
             i.fa.fa-android
             h2 Andoid下载
     section.se1.pr
@@ -99,7 +111,7 @@ html
               p 电话：
               p 020-61091480
         .copyright
-          | 京ICP备15067566号-1 Copyright 
+          | 京ICP备15067566号-1 Copyright
           i.fa.fa-copyright
           |  2015-2016 youcheyue.com All Rights Reserved
     script(type='text/javascript', src='/youcheyue/js/wow.min.js')
