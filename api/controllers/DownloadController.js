@@ -9,7 +9,7 @@ module.exports = {
     if (isIos(req.headers['user-agent'])) {
       return res.redirect('https://itunes.apple.com/cn/app/id1080937809');
     } else {
-      var out_url = 'http://download.fir.im/v2/app/install/56559c1500fc7444a2000009?download_token=3790c7ca27de3b36ea39055e7141a930';
+      var out_url = 'http://imgadmin.youcheyue.com/youcheyue_www_1_0_1.apk_1.0.1.apk';
       var need_updated = true;
       async.waterfall([
         function (cb) {
