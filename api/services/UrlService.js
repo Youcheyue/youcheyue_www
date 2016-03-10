@@ -6,7 +6,6 @@ module.exports = {
   getNewUrl: function(callback){
     async.waterfall([
       function(cb){
-        console.log('--------------');
         request.get("http://app.youcheyue.com/api/v1/appversion/find?os=android")
           .end(function (err, res) {
             if(!err && res){
