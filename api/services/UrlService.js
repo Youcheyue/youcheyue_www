@@ -6,12 +6,12 @@ module.exports = {
   getNewUrl: function(callback){
     async.waterfall([
       function(cb){
-        request.get("http://api.fir.im/apps/latest/56559c1500fc7444a2000009?api_token=8a969b1a2c5b9801925be423e1e15619")
+        request.get("http://app.youcheyue.com/api/v1/appversion/find?os=android")
           .end(function (err, res) {
             if(!err && res){
               var result = JSON.parse(res.text);
-              if(!_.isEmpty(result) && result.direct_install_url){
-                cb(null,result.direct_install_url);
+              if(!_.isEmpty(result) && (result.code) == 0 && result.data){
+                cb(null,result.data.url);
               }else{
                 cb("nothing update");
               }
