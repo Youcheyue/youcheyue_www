@@ -15,7 +15,7 @@ ul,ol,li,dl,dd,dt {list-style:none}
 /*co*/
 .fl{float:left}.fr{float:right}.tc{text-align: center;}
 .cp{cursor: pointer;}
-.pr{position:relative}.pa{position:absolute} 
+.pr{position:relative}.pa{position:absolute}
 .pd20{padding:20px}
 .main,.inner,.wrap{width:95%;margin: 0px auto}
 .redA{color:#F00!important;}
@@ -44,7 +44,7 @@ ul,ol,li,dl,dd,dt {list-style:none}
 
 
 .banner{width: 100%; height:100%;background-size: cover; background-repeat:no-repeat; background-position:top center; }
-.banner{background-image: url(../images/jiace.jpg);}
+.banner{background-image: url(../images/min/jiace-min.jpg);}
 .banner1{width: 100%;}
 .banner .txt1{width:30%; left:15%; margin-left:-5%; top:17%; position: absolute; }
 .banner .chengxu{display:block; left:15%; position: absolute; bottom:8%; margin-left:-5%;}
@@ -125,7 +125,7 @@ ul,ol,li,dl,dd,dt {list-style:none}
 .section h3{ font-size:20px;}
 .section .text{ font-size:18px;}
 .section1,.section2,.section4,.section3,.imain{background-size: cover; background-repeat:no-repeat; background-position:top center;}
-.section1{background-image: url(../images/669888999.jpg);} 
+.section1{background-image: url(../images/669888999.jpg);}
 .section2{background-image: url(../images/iPhone666.jpg);}
 .section3{background-image: url(../images/bbbgg.jpg);}
 .section4{background-image: url(../images/adBg3.jpg);}
