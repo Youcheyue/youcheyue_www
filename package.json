@@ -25,7 +25,7 @@
     "sails": "0.11.3",
     "sails-disk": "^0.10.8",
     "sails-hook-cron": "^2.1.1",
-    "sails-hook-newrelic": "^0.2.2",
+    "sails-hook-newrelic-agent": "0.0.2",
     "sails-memory": "^0.10.5"
   },
   "devDependencies": {
