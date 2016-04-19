@@ -8,6 +8,8 @@
 module.exports = {
 
   index: function(req, res) {
+    console.log('========');
+    console.log(req.host);
     var out_url = 'http://imgadmin.youcheyue.com/youcheyue_www_1_0_1.apk_1.0.1.apk';
     var need_updated = true;
     async.waterfall([
