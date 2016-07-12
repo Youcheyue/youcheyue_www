@@ -19,7 +19,7 @@
       "user" : "ycyuser",
       "host" : "120.55.185.212",
       "ref"  : "origin/master",
-      "repo" : "git@git.oschina.net:leoliew/youcheyue_www.git",
+      "repo" : "git@github.com:leoliew/youcheyue_www.git",
       "path" : "/home/ycyuser/project/youcheyue_www",
       "post-deploy" : "npm install && pm2 startOrRestart bin/processes_hangzhou_c.json --env production"
     }

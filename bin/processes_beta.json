@@ -18,7 +18,7 @@
       "user" : "ycyuser",
       "host" : "120.24.4.187",
       "ref"  : "origin/dev",
-      "repo" : "git@git.oschina.net:leoliew/youcheyue_www.git",
+      "repo" : "git@github.com:leoliew/youcheyue_www.git",
       "path" : "/home/ycyuser/project/youcheyue_www",
       "post-deploy" : "npm install && pm2 startOrRestart bin/processes_beta.json"
     }
