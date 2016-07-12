@@ -17,11 +17,11 @@
   "deploy" : {
     "production" : {
       "user" : "ycyuser",
-      "host" : "120.55.185.212",
+      "host" : "120.27.139.21",
       "ref"  : "origin/master",
       "repo" : "git@github.com:leoliew/youcheyue_www.git",
       "path" : "/home/ycyuser/project/youcheyue_www",
-      "post-deploy" : "npm install && pm2 startOrRestart bin/processes_hangzhou_c.json --env production"
+      "post-deploy" : "npm install && pm2 startOrRestart bin/processes_hangzhou_a.json --env production"
     }
   }
 }
