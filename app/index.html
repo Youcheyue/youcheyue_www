@@ -1,0 +1,108 @@
+---
+layout: base
+title: 有车约官网
+---
+
+<script>
+  //鼠标滑动
+  $(document).ready(function() {
+    $(".user-avatar-ncik").hover(function(){
+      $(this).find(".work-panel").stop().animate({height:"173px"},400).show()
+    },function(){
+      $(this).find(".work-panel").stop().animate({height:"0px"},400).hide()
+    });
+  });
+  //生成二维码
+  $(document).ready(function() {
+    jQuery('#qrcode').qrcode({
+      render	: "canvas",
+      text	: 'http://www.youcheyue.com',
+      width : 140,
+      height: 140,
+    });
+  });
+</script>
+<div id="header">
+  <div class="inner">
+    <div class="logo"><img src="/assets/img/min/logo-min.png"></div>
+    <ul id="menu">
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="/version">版本动态</a></li>
+      <li><a href="/join">加入我们</a></li>
+      <li><a href="/about">关于有车约</a></li>
+    </ul>
+  </div>
+</div>
+<section class="banner pr">
+  <div class="txt1 animated rotateInDownRight"><img src="/assets/img/min/slogan-min.png"></div>
+  <ul class="chengxu animated fadeInUp">
+    <li class="scan-QR-code user-avatar-ncik">
+      <div class="work-panel">
+        <div id="qrcode"></div>
+        <div class="arrow-down"></div>
+      </div><i class="fa fa-qrcode"></i>
+      <h2>扫码下载</h2>
+    </li>
+    <li class="apple"><a href="https://itunes.apple.com/cn/app/you-che-yue/id1080937809?mt=8" target="_blank"><i class="fa fa-apple"></i>
+      <h2>App Store</h2></a></li>
+    <li class="android"><a href="undefined" target="_blank"><i class="fa fa-android"></i>
+      <h2>Andoid下载</h2></a></li>
+  </ul>
+</section>
+<section class="se1 pr">
+  <div class="con">
+    <div data-wow-delay="0.3s" class="tu1 wow animated slideInLeft"><img src="/assets/img/min/pc-tu1-min.png"></div>
+    <div data-wow-delay="0.5s" class="txt1 wow animated fadeInUp"><img src="/assets/img/min/pc-txt1-min.png"></div>
+  </div>
+</section>
+<section class="se2 pr">
+  <div class="con">
+    <div data-wow-delay="0.8s" class="txt2 wow animated fadeInUp"><img src="/assets/img/min/pc-txt2-min.png"></div>
+    <div data-wow-delay="0.6s" class="tu2 wow animated fadeInDown"><img src="/assets/img/min/pc-tu2-min.png"></div>
+  </div>
+</section>
+<section class="se3 pr">
+  <div class="con">
+    <div data-wow-delay="0.9s" class="tu3 wow animated fadeInDown"><img src="/assets/img/min/pc-tu3-min.png"></div>
+    <div data-wow-delay="1.3" class="txt3 wow animated fadeInUp"><img src="/assets/img/min/pc-txt3-min.png"></div>
+  </div>
+</section>
+<div id="footer">
+  <div class="inner">
+    <div class="contact">
+      <div class="marker"><i class="fa fa-map-marker"></i>
+        <div class="xiangqq">
+          <p>地址：</p>
+          <p>广州市海珠区琶洲大道东2-8号广州国际采购中心611-612</p>
+        </div>
+      </div>
+      <div class="envelope"><i class="fa fa-envelope-square"></i>
+        <div class="xiangqq">
+          <p>邮箱：</p>
+          <p>youcheyue@gmail.com</p>
+        </div>
+      </div>
+      <div class="phone"><i class="fa fa-phone"></i>
+        <div class="xiangqq">
+          <p>电话：</p>
+          <p>020-61091480</p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">京ICP备15067566号-1 Copyright<i class="fa fa-copyright"></i> 2015-2016 youcheyue.com All Rights Reserved</div>
+  </div>
+</div>
+<script type="text/javascript" src="/assets/js/wow.min.js"></script>
+<script>new WOW().init();</script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'http://7xr0ks.com2.z0.glb.qiniucdn.com/analytics.js', 'ga');ga('create', 'UA-74586359-1', 'auto');ga('send', 'pageview');
+</script>
