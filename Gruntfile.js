@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       // Run each image through the image processing pipeline exposed by express-processimage
       // Allows you to resize, recompress, change image format, rasterize SVG and much more
       // Reading the documentation is highly recommended: https://github.com/papandreou/express-processimage#express-processimage
-      processimage: true,
+      processimage: true
     },
 
     clean: {
