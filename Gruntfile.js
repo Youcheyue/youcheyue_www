@@ -97,21 +97,21 @@ module.exports = function (grunt) {
       dist: {
         options: {
           remote: 'git@github.com:leoliew/youcheyue_www.git',
-          branch: 'ghs-pages',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      },
+      travis: {
+        options: {
+          remote: 'https://github.com/leoliew/youcheyue_www.git',
+          branch: 'master',
+          login: 'SBoudrias',
+          token: process.env.GH_TOKEN,
           commit: true,
           push: true
         }
       }
-      // travis: {
-      //   options: {
-      //     remote: 'https://github.com/leoliew/youcheyue_www.git',
-      //     branch: 'master',
-      //     login: 'SBoudrias',
-      //     token: process.env.GH_TOKEN,
-      //     commit: true,
-      //     push: true
-      //   }
-      // }
     },
 
     jshint: {
