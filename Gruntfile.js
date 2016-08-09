@@ -97,7 +97,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           remote: 'git@github.com:leoliew/youcheyue_www.git',
-          branch: 'gh-pages',
+          branch: 'ghs-pages',
           commit: true,
           push: true
         }
