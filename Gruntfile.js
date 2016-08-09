@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       // Run each image through the image processing pipeline exposed by express-processimage
       // Allows you to resize, recompress, change image format, rasterize SVG and much more
       // Reading the documentation is highly recommended: https://github.com/papandreou/express-processimage#express-processimage
-      processimage: true,
+      processimage: true
     },
 
     clean: {
@@ -97,7 +97,17 @@ module.exports = function (grunt) {
       dist: {
         options: {
           remote: 'git@github.com:leoliew/youcheyue_www.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      },
+      travis: {
+        options: {
+          remote: 'https://github.com/leoliew/youcheyue_www.git',
           branch: 'master',
+          login: 'SBoudrias',
+          token: process.env.GH_TOKEN,
           commit: true,
           push: true
         }
@@ -112,7 +122,13 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= youcheyue.app %>/assets/js/**/*.js',
-        '!<%= youcheyue.app %>/assets/js/libs/*.js'
+        '!<%= youcheyue.app %>/assets/js/libs/*.js',
+        '!<%= youcheyue.app %>/assets/js/**/*.min.js',
+        '!<%= youcheyue.app %>/assets/js/analytics.js',
+        '!<%= youcheyue.app %>/assets/js/jquery.fullPage.js',
+        '!<%= youcheyue.app %>/assets/js/jquery.js',
+        '!<%= youcheyue.app %>/assets/js/omee.js',
+        '!<%= youcheyue.app %>/assets/js/nicescroll.js'
       ]
     },
 
@@ -122,7 +138,8 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= youcheyue.app %>/assets/css/**/*.css'
+          '<%= youcheyue.app %>/assets/css/**/*.css',
+          '!<%= youcheyue.app %>/assets/css/main.css'
         ]
       }
     },

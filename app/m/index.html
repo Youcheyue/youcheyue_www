@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>有车约 - 移动首页</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="/assets/css/animate.css">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+  <meta name="format-detection" content="telephone=no">
+  <script>
+    var ua = navigator.userAgent;
+    if ((!ua.match(/iPhone/i)) && (!ua.match(/Android/i))) {
+      window.location.href = '/';
+    }
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="/assets/js/weixin.js"></script>
+</head>
+<body>
+<script>
+  $(function(){
+    $('#dowebok').fullpage({
+      sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
+      //navigationTooltips: ['首页', '更新日志', '加入我们', '关于有车约'],
+      navigation: true,
+      anchors: ['page1', 'page2', 'page3', 'page4'],
+      menu: '#menu',
+      scrollingSpeed:1000,
+      scrollOverflow: true,
+      afterRender: function(){
+        $('.mp1 .titlep').addClass('animated lightSpeedIn');
+        setTimeout(function(){
+          $('.mp1 .titlep').removeClass('animated lightSpeedIn');
+        }, 1000);
+        $('.mp1 .download').addClass('animated fadeInUp');
+        setTimeout(function(){
+          $('.mp1 .download').removeClass('animated fadeInUp');
+        }, 1000);
+      },
+      afterLoad: function(anchorLink, index){
+        if(index == 1){
+          $('.mp1 .titlep').addClass('animated lightSpeedIn');
+          setTimeout(function(){
+            $('.mp1 .titlep').removeClass('animated lightSpeedIn');
+          }, 1000);
+          $('.mp1 .download').addClass('animated fadeInUp');
+          setTimeout(function(){
+            $('.mp1 .download').removeClass('animated fadeInUp');
+          }, 1000);
+        }
+        if(index == 2){
+          $('.mp2 .txt2').addClass('animated flipInX');
+          setTimeout(function(){
+            $('.mp2 .txt2').removeClass('animated flipInX');
+          }, 1000);
+          $('.mp2 .pic2').addClass('animated bounceInLeft');
+          setTimeout(function(){
+            $('.mp2 .pic2').removeClass('animated bounceInLeft');
+          }, 1000);
+        }
+        if(index == 3){
+          $('.mp3 .txt3').addClass('animated rubberBand');
+          setTimeout(function(){
+            $('.mp3 .txt3').removeClass('animated rubberBand');
+          }, 1000);
+          $('.mp3 .pic3').addClass('animated bounceInDown');
+          setTimeout(function(){
+            $('.mp3 .pic3').removeClass('animated bounceInDown');
+          }, 1000);
+        }
+        if(index == 4){
+          $('.mp4 .txt4').addClass('animated lightSpeedIn');
+          setTimeout(function(){
+            $('.mp4 .txt4').removeClass('animated lightSpeedIn');
+          }, 1000);
+          $('.mp4 .pic4').addClass('animated flipOutY');
+          setTimeout(function(){
+            $('.mp4 .pic4').removeClass('animated flipOutY');
+          }, 1000);
+        }
+        $('.mp4 .download').addClass('animated fadeInUp');
+        setTimeout(function(){
+          $('.mp4 .download').removeClass('animated fadeInUp');
+        }, 1000);
+      },
+      onLeave: function(index,nextIndex, direction){
+        if(index == '1'){
+        }
+        if(index == '2'){
+        }
+        if(index == '3'){
+        }
+        if(index == '4'){
+        }
+      }
+    });
+    if (navigator.userAgent.toLowerCase().indexOf('micromessenger') > -1) {
+      if((navigator.userAgent.toLowerCase().indexOf('iphone') > -1) || (navigator.userAgent.toLowerCase().indexOf('ipad') > -1) ){
+        $('#guide img').attr('src','/assets/img/min/shareto-ios-min.png');
+      }
+      $('#download1').on('click',function(){
+        $('#download1').attr('onclick',_system._guide(true));
+      });
+      $('#download2').on('click',function(){
+        $('#download2').attr('onclick',_system._guide(true));
+      });
+    } else {
+      if(navigator.userAgent.toLowerCase().indexOf('iphone') > -1){
+        $('#download1').attr('href', "https://itunes.apple.com/cn/app/id1080937809");
+        $('#download2').attr('href', "https://itunes.apple.com/cn/app/id1080937809");
+      }else{
+        $('#download1').attr('href', "http://imgadmin.youcheyue.com/youcheyue_2_2_0.apk");
+        $('#download2').attr('href', "http://imgadmin.youcheyue.com/youcheyue_2_2_0.apk");
+      }
+    }
+  });
+</script>
+<div id="cover"></div>
+<div id="guide"><img src="/assets/img/min/shareto-min.png"></div>
+<div id="dowebok">
+  <section class="section mp1">
+    <div class="page-beij">
+      <div class="logo"><img src="/assets/img/min/mlogo-min.png"></div>
+      <div class="titlep"><img src="/assets/img/min/bliii-min.png"></div>
+      <div class="btn-grp top333"><a id="download1" href="#" class="download">下载应用<i class="fa fa-arrow-circle-down"></i></a></div>
+    </div>
+  </section>
+  <section class="section mp2">
+    <div class="txt2"><img src="/assets/img/min/txt2-min.png"></div>
+    <div class="pic2"><img src="/assets/img/min/pic2-min.png"></div>
+  </section>
+  <section class="section mp3">
+    <div class="txt3"><img src="/assets/img/min/txt3-min.png"></div>
+    <div class="pic3"><img src="/assets/img/min/pic3-min.png"></div>
+  </section>
+  <section class="section mp4">
+    <div class="txt4"><img src="/assets/img/min/txt4-min.png"></div>
+    <div class="pic4"><img src="/assets/img/min/pic4-min.png"></div>
+    <div class="btn-grp top4444"><a id="download2" href="#" class="download">下载应用<i class="fa fa-arrow-circle-down"></i></a></div>
+  </section>
+</div>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-74586359-1', 'auto');ga('send', 'pageview');
+</script>
+</body>
+</html>
