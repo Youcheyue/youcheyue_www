@@ -90,7 +90,9 @@ module.exports = function (grunt) {
 
       browsers: [
         'last 2 versions'
-      ]
+      ],
+
+      asyncScripts: false
     },
 
     buildcontrol: {
