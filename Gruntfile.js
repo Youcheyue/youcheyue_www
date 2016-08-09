@@ -101,17 +101,17 @@ module.exports = function (grunt) {
           commit: true,
           push: true
         }
-      },
-      travis: {
-        options: {
-          remote: 'https://github.com/leoliew/youcheyue_www.git',
-          branch: 'master',
-          login: 'SBoudrias',
-          token: process.env.GH_TOKEN,
-          commit: true,
-          push: true
-        }
       }
+      // travis: {
+      //   options: {
+      //     remote: 'https://github.com/leoliew/youcheyue_www.git',
+      //     branch: 'master',
+      //     login: 'SBoudrias',
+      //     token: process.env.GH_TOKEN,
+      //     commit: true,
+      //     push: true
+      //   }
+      // }
     },
 
     jshint: {
